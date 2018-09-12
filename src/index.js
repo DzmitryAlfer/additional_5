@@ -64,7 +64,6 @@ function checkOpenBracketBranch(config, ch, index = 0, stack = [], numOfOpenBrac
   }
 
   if (config.isOpenBracketsNumExceed(ch, numOfOpenBrackets[ch] + 1)) {
-    console.log('num of bracet exceed');
     return false;
   }
 
@@ -106,6 +105,14 @@ class Configuration {
 
   init() {
     let result = true;
+
+    /*for(let i = 0; i < this.charArray.length; i++) {
+      const openCh = this.charArray[index];
+      
+      if(this.isTheSameOpenClose(openCh)) {
+
+      }
+    }*/
 
     this.charArray.forEach(ch => {
       if(this.openCloseTheSame.includes(ch) || this.openBrackets.includes(ch)) {
